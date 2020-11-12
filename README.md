@@ -8,6 +8,8 @@
 * **multiple camera**: could tell which camera to use by specifying the device key word.
 Example: `gst-launch-1.0 v4l2src device=/dev/dev0 ! <rest of the pipeline>`
 
+### Run docker container and visit device url /playlist.m3u8
+
 ## Testing gstreamer:
 
 ### MJPEG RTP stream
@@ -42,6 +44,6 @@ We could also specify where the playlist is supposed to be stored. TODO
 
 `gst-launch-1.0 -v v4l2src  device=/dev/video0 !  videoconvert ! videoscale ! videorate ! video/x-raw,framerate=10/1,width=480,height=360 ! x264enc !  mpegtsmux ! hlssink max-files=10 `
 
-### Run docker container and visit device url /playlist.m3u8
+
 
 **TODO: expose RTP stream for realtime streaming**
