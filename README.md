@@ -42,4 +42,6 @@ We could also specify where the playlist is supposed to be stored. TODO
 
 `gst-launch-1.0 -v v4l2src  device=/dev/video0 !  videoconvert ! videoscale ! videorate ! video/x-raw,framerate=10/1,width=480,height=360 ! x264enc !  mpegtsmux ! hlssink max-files=10 `
 
+##Once Application is running visit device url /playlist.m3u8
+
 **TODO: expose RTP stream for realtime streaming**
