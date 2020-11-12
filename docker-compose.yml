@@ -1,0 +1,11 @@
+version: '2'
+services:
+  video-streams:
+          build: ./lib
+          environment:
+            - UDEV=1
+          devices:
+            - '/dev:/dev'
+          privileged: true
+          restart: always
+          network_mode: 'host'
